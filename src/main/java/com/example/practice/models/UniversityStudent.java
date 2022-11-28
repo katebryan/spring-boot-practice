@@ -1,6 +1,7 @@
 package com.example.practice.models;
 
 public class UniversityStudent implements Student {
+    private int id;
     private String firstName;
     private String lastName;
     private String emailAddress;
@@ -14,6 +15,14 @@ public class UniversityStudent implements Student {
         this.firstName = firstName;
         this.lastName = lastName;
         this.emailAddress = emailAddress;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -68,4 +77,10 @@ public class UniversityStudent implements Student {
     public String getFullName() {
         return getFirstName() + " " + getLastName();
     }
+
+    private String getFirstNameAndId() {
+        return getFirstName() + " " + getId();
+    }
+
+
 }
